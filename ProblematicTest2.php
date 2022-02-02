@@ -8,12 +8,13 @@ class ProblematicTest extends TestCase
 {
     private $foo;
 
-    private function bar(array $seeks, array $matchingIndexes)
+    public function barTest()
     {
         $i = 0;
 
         $this->foo
             ->expects($this->at($i))
-            ->method('createFromSeeks');
+            ->method('createFromSeeks')
+            ->willReturn(1);
     }
 }
